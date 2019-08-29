@@ -10,5 +10,6 @@ import java.util.List;
 public interface ParkingBoyMapper {
 
     List<ParkingBoy> selectAll();
-//   void insert(@Param("parkingBoy") ParkingBoy parkingBoy);
+
+    void insert(@Param("parkingBoy") ParkingBoy parkingBoy);
 }

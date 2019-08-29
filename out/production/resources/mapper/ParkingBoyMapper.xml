@@ -6,6 +6,10 @@
         select * from `parking_boy`;
     </select>
 
+    <insert id="insert">
+       insert into `parking_boy` (`parkingBoyID`,`parkingBoyName`,`parkingBoyAge`)
+       values(#{parkingBoy.parkingBoyID},#{parkingBoy.parkingBoyName},#{parkingBoy.parkingBoyAge});
+    </insert>
 
 
 </mapper>

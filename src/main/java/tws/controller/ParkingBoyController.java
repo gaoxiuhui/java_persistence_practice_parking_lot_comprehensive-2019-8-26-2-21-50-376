@@ -1,6 +1,7 @@
 package tws.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,9 +27,9 @@ public class ParkingBoyController {
         return ResponseEntity.ok(parkingBoy);
     }
 
-//    @PostMapping("")
-//    public ResponseEntity<ParkingBoy> insert(@RequestBody ParkingBoy parkingBoy) {
-//        parkingBoyMapper.insert(parkingBoy);
-//        return ResponseEntity.created(URI.create("/employees/" + parkingBoy.getParkingBoyID())).body(parkingBoy);
-//    }
+    @PostMapping("")
+    public ResponseEntity<ParkingBoy> insert(@RequestBody ParkingBoy parkingBoy) {
+        parkingBoyMapper.insert(parkingBoy);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
 }
