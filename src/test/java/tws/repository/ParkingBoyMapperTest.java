@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.jdbc.JdbcTestUtils;
-import tws.entity.Employee;
+import tws.entity.ParkingBoy;
 
 import javax.sql.DataSource;
 import java.util.List;
@@ -17,10 +17,10 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @MybatisTest
-public class EmployeeMapperTest {
+public class ParkingBoyMapperTest {
 
     @Autowired
-    private EmployeeMapper employeeMapper;
+    private ParkingBoyMapper parkingBoyMapper;
 
     JdbcTemplate jdbcTemplate;
 
@@ -39,7 +39,7 @@ public class EmployeeMapperTest {
         // given
         jdbcTemplate.execute("INSERT INTO EMPLOYEE VALUES(1,'zhangsan', 21);");
         // when
-        List<Employee> employeeList = employeeMapper.selectAll();
+        List<ParkingBoy> employeeList = parkingBoyMapper.selectAll();
         // then
         assertEquals(1, employeeList.size());
     }
