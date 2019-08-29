@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import tws.entity.Employee;
 import tws.entity.ParkingBoy;
-import tws.repository.ParkingBoyMapper;
+import tws.ParkingBoyMapper;
 
-import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -31,5 +31,12 @@ public class ParkingBoyController {
     public ResponseEntity<ParkingBoy> insert(@RequestBody ParkingBoy parkingBoy) {
         parkingBoyMapper.insert(parkingBoy);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    @GetMapping("/employees")
+    public ResponseEntity<List<Employee>> getAllEmployees(){
+        List<Employee> employees = parkingBoyMapper.selectAllEmployees();
+        System.out.println(employees.toString());
+        return ResponseEntity.ok(employees);
     }
 }

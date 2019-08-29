@@ -1,4 +1,4 @@
-package tws.repository;
+package tws;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
