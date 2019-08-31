@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import tws.entity.Employee;
+import tws.dto.Employee;
 import tws.entity.ParkingBoy;
-import tws.repository.ParkingBoyMapper;
 import tws.service.ParkingBoyService;
 
 import java.util.List;

@@ -33,5 +33,6 @@ public class ParkingLotController {
     public ResponseEntity<ParkingLot> insert(@RequestBody ParkingLot parkingLot) {
         parkingLotService.insertParkingLot(parkingLot);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+
     }
 }

@@ -2,7 +2,7 @@ package tws.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tws.entity.Employee;
+import tws.dto.Employee;
 import tws.entity.ParkingBoy;
 import tws.repository.ParkingBoyMapper;
 

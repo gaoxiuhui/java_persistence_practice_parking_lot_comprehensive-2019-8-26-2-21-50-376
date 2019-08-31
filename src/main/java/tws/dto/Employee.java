@@ -1,4 +1,6 @@
-package tws.entity;
+package tws.dto;
+
+import tws.entity.ParkingLot;
 
 import java.io.Serializable;
 import java.util.List;
