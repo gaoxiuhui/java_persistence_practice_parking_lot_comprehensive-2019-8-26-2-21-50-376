@@ -28,7 +28,7 @@ public class ParkingLotMapperTest {
         //then
         assertEquals(1, JdbcTestUtils.countRowsInTable(jdbcTemplate,"parking_lot"));
     }
-// 查询测试 
+// 查询测试
     @Test
     public void selectAllTest(){
         //given

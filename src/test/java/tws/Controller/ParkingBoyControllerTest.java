@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 public class ParkingBoyControllerTest {
-
+   // 通过MockMVC编写API测试
     @Autowired
     MockMvc mockMvc;
 

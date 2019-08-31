@@ -1,3 +1,4 @@
+
 CREATE TABLE  parking_boy (
   parkingBoyID int PRIMARY KEY,
   parkingBoyName VARCHAR(64) NOT NULL,
