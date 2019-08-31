@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import tws.entity.Employee;
 import tws.entity.ParkingBoy;
 import tws.repository.ParkingBoyMapper;
+import tws.service.ParkingBoyService;
 
 import java.util.List;
 
@@ -19,24 +20,24 @@ import java.util.List;
 public class ParkingBoyController {
 
     @Autowired
-    private ParkingBoyMapper parkingBoyMapper;
+    private ParkingBoyService parkingBoyService;
+
     // get 获得列表
     @GetMapping("")
     public ResponseEntity<List<ParkingBoy>> getAll() {
-        List<ParkingBoy> parkingBoy=parkingBoyMapper.selectAll();
+        List<ParkingBoy> parkingBoy=parkingBoyService.selectAllParkingBoys();
         return ResponseEntity.ok(parkingBoy);
     }
  // 插入  post  添加值
     @PostMapping("")
     public ResponseEntity<ParkingBoy> insert(@RequestBody ParkingBoy parkingBoy) {
-        parkingBoyMapper.insert(parkingBoy);
+        parkingBoyService.insertParkingBoys(parkingBoy);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
  // get 获得某一个停车男孩下的所有停车场
     @GetMapping("/employees")
     public ResponseEntity<List<Employee>> getAllEmployees(){
-        List<Employee> employees = parkingBoyMapper.selectAllEmployees();
-        System.out.println(employees.toString());
+        List<Employee> employees = parkingBoyService.selectAllEmployeesParkingBoys();
         return ResponseEntity.ok(employees);
     }
 }
