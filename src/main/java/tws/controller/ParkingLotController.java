@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import tws.entity.ParkingLot;
-import tws.ParkingLotMapper;
+import tws.repository.ParkingLotMapper;
 
 
 import java.util.List;
@@ -21,12 +21,13 @@ public class ParkingLotController {
     @Autowired
     private ParkingLotMapper parkingLotMapper;
 
+    // get 获得列表
     @GetMapping("")
     public ResponseEntity<List<ParkingLot>> getAll() {
         List<ParkingLot> parkingLot=parkingLotMapper.selectAll();
         return ResponseEntity.ok(parkingLot);
     }
-
+    // 插入  post  添加值
     @PostMapping("")
     public ResponseEntity<ParkingLot> insert(@RequestBody ParkingLot parkingLot) {
         parkingLotMapper.insert(parkingLot);

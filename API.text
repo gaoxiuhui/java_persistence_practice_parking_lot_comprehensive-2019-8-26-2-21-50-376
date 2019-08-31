@@ -1,0 +1,60 @@
+Method:POST
+URL:/parkingBoys
+request body:{  "parkingBoyID":1,
+              	"parkingBoyName":"高阳",
+              	"parkingBoyAge":20}
+response body:NULL
+response code:201,500
+
+Method:GET
+URL:/parkingBoys
+request body:NULL
+response body:[{  "parkingBoyID":1,
+                  "parkingBoyName":"高阳",
+                  "parkingBoyAge":20}]
+response code:200,500
+
+Method:POST
+URL:/parkingLots
+request body:{
+             	"parkingLotID":1,
+             	"capatity":80,
+             	"availablePositionCount":20,
+             	"parkingBoyID":1
+             }
+response body:null
+response code:201,500
+
+Method:GET
+URL:/parkingLots
+request body:null
+response body:[{
+                "parkingLotID":1,
+                 "capatity":80,
+                  "availablePositionCount":20,
+                  "parkingBoyID":1
+              }]
+response code:200,500
+
+Method:GET
+URL:/parkingBoys/employees
+request body:null
+response body:
+[
+    {
+        "employeeID": 1,
+        "parkingBoyName": "高阳",
+        "parkingBoyAge": 20,
+        "parkingLotList": [
+            {
+                "parkingLotID": 1,
+                "capatity": 80,
+                "availablePositionCount": 20,
+                "parkingBoyID": 1
+            }
+        ]
+    }
+]
+response code:200,500
+
+

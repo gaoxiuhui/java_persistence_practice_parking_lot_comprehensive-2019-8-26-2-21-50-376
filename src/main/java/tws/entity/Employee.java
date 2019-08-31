@@ -6,13 +6,13 @@ import java.util.List;
 public class Employee implements Serializable {
     private int employeeID;
     private String parkingBoyName;
-    private int age;
+    private int parkingBoyAge;
     private List<ParkingLot> parkingLotList;
 
-    public Employee(int employeeID, String parkingBoyName, int age, List<ParkingLot> parkingLotList) {
+    public Employee(int employeeID, String parkingBoyName, int parkingBoyAge, List<ParkingLot> parkingLotList) {
         this.employeeID = employeeID;
         this.parkingBoyName = parkingBoyName;
-        this.age = age;
+        this.parkingBoyAge = parkingBoyAge;
         this.parkingLotList = parkingLotList;
     }
 
@@ -35,12 +35,12 @@ public class Employee implements Serializable {
         this.parkingBoyName = parkingBoyName;
     }
 
-    public int getAge() {
-        return age;
+    public int getParkingBoyAge() {
+        return parkingBoyAge;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setParkingBoyAge(int parkingBoyAge) {
+        this.parkingBoyAge = parkingBoyAge;
     }
 
     public List<ParkingLot> getParkingLotList() {
@@ -55,8 +55,8 @@ public class Employee implements Serializable {
     public String toString() {
         return "Employee{" +
                 "employeeID=" + employeeID +
-                ", parkingBoyName='" + parkingBoyName + '\'' +
-                ", age=" + age +
+                ", parkingBoyName=" + parkingBoyName + '\'' +
+                ", parkingBoyAge=" + parkingBoyAge +
                 ", parkingLotList=" + parkingLotList +
                 '}';
     }
