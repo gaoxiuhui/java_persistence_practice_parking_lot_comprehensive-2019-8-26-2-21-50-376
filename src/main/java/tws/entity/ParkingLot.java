@@ -1,9 +1,15 @@
 package tws.entity;
 
+import javax.validation.constraints.NotNull;
+
 public class ParkingLot {
+    @NotNull(message="输入不能为空")
     private int parkingLotID;
+    @NotNull(message="输入不能为空")
     private int capatity;
+    @NotNull(message="输入不能为空")
     private int availablePositionCount;
+    @NotNull(message="输入不能为空")
     private int parkingBoyID;
 
     public ParkingLot() {

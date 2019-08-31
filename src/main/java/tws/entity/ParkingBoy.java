@@ -1,8 +1,13 @@
 package tws.entity;
 
+import javax.validation.constraints.NotNull;
+
 public class ParkingBoy {
+    @NotNull(message="输入不能为空")
     private int parkingBoyID;
+    @NotNull(message="输入不能为空")
     private String parkingBoyName;
+    @NotNull(message="输入不能为空")
     private int parkingBoyAge;
 
     public ParkingBoy() {
